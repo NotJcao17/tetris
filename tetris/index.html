@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ESP32 Tetris</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+            margin-top: 20px;
+        }
+        canvas {
+            /* El color de fondo del tablero vacío */
+            background-color: #111; 
+            /* Borde para delimitar el área de juego */
+            border: 2px solid #555; 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+        }
+        h1, h2 {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESP32 Tetris</h1>
+    <h2 id="score">Puntuación: 0</h2>
+    
+    <!-- Un tablero de Tetris estándar es de 10 columnas por 20 filas. 
+         Si cada bloque mide 30px, el ancho es 300 y el alto 600. -->
+    <canvas id="tetris" width="300" height="600"></canvas>
+    
+    <script src="app.js"></script>
+</body>
+</html>
