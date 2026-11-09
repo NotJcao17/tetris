@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="880" height="400" rx="16" fill="#1b1d22"/>
+
+  <!-- ESP32 board -->
+  <rect x="40" y="60" width="250" height="280" rx="12" fill="#0f3d2e" stroke="#2f7d5c" stroke-width="2"/>
+  <rect x="95" y="90" width="140" height="90" rx="6" fill="#c9ccd1"/>
+  <text x="165" y="130" text-anchor="middle" font-size="18" font-weight="700" fill="#2b2e33">ESP32</text>
+  <text x="165" y="152" text-anchor="middle" font-size="12" fill="#2b2e33">DevKit · Wi-Fi</text>
+  <text x="165" y="215" text-anchor="middle" font-size="12" fill="#9fd8bd">WebSocket server :81</text>
+
+  <!-- pins on the board edge -->
+  <g font-size="13" fill="#e8eaed">
+    <circle cx="290" cy="120" r="7" fill="#f5c542"/>
+    <text x="275" y="314" text-anchor="end" fill="#9fd8bd">LED · GPIO 2</text>
+    <circle cx="290" cy="190" r="7" fill="#f5c542"/>
+    <circle cx="290" cy="260" r="7" fill="#f5c542"/>
+    <circle cx="290" cy="310" r="5" fill="#7fe0a8"/>
+  </g>
+
+  <!-- wires -->
+  <g stroke="#f5c542" stroke-width="3" fill="none">
+    <path d="M297 120 H380"/>
+    <path d="M297 190 H380"/>
+    <path d="M297 260 H380"/>
+  </g>
+
+  <!-- touch pads -->
+  <g>
+    <rect x="380" y="96" width="210" height="48" rx="10" fill="#2a2d34" stroke="#f5c542" stroke-width="2"/>
+    <text x="396" y="117" font-size="14" font-weight="700" fill="#ffffff">PIN1 · GPIO 13 (D13)</text>
+    <text x="396" y="135" font-size="12" fill="#b9bdc4">touch pad</text>
+
+    <rect x="380" y="166" width="210" height="48" rx="10" fill="#2a2d34" stroke="#f5c542" stroke-width="2"/>
+    <text x="396" y="187" font-size="14" font-weight="700" fill="#ffffff">PIN2 · GPIO 4 (D4)</text>
+    <text x="396" y="205" font-size="12" fill="#b9bdc4">touch pad</text>
+
+    <rect x="380" y="236" width="210" height="48" rx="10" fill="#2a2d34" stroke="#f5c542" stroke-width="2"/>
+    <text x="396" y="257" font-size="14" font-weight="700" fill="#ffffff">PIN3 · GPIO 32 (D32)</text>
+    <text x="396" y="275" font-size="12" fill="#b9bdc4">touch pad</text>
+  </g>
+
+  <!-- arrows to actions -->
+  <g stroke="#6aa9ff" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M592 120 H628"/>
+    <path d="M592 190 H628"/>
+    <path d="M592 260 H628"/>
+  </g>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6aa9ff"/>
+    </marker>
+  </defs>
+
+  <!-- actions -->
+  <g>
+    <text x="640" y="116" font-size="15" font-weight="700" fill="#ffffff">◀ Move left</text>
+    <text x="640" y="135" font-size="12" fill="#b9bdc4">tap: 1 cell · hold: repeat</text>
+
+    <text x="640" y="186" font-size="15" font-weight="700" fill="#ffffff">Move right ▶</text>
+    <text x="640" y="205" font-size="12" fill="#b9bdc4">tap: 1 cell · hold: repeat</text>
+
+    <text x="640" y="256" font-size="15" font-weight="700" fill="#ffffff">⟳ Rotate / ⤓ Drop</text>
+    <text x="640" y="275" font-size="12" fill="#b9bdc4">tap: rotate · hold: hard drop</text>
+  </g>
+
+  <!-- browser feedback -->
+  <path d="M790 330 C 600 360, 420 360, 297 312" stroke="#7fe0a8" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+  <text x="850" y="334" text-anchor="end" font-size="13" font-weight="700" fill="#7fe0a8">Browser</text>
+  <text x="560" y="372" text-anchor="middle" font-size="12" fill="#9fd8bd">browser sends "SCORE" on every cleared line → the LED flashes and fades out</text>
+
+  <text x="40" y="38" font-size="18" font-weight="700" fill="#ffffff">Touch controls</text>
+  <text x="840" y="38" text-anchor="end" font-size="12" fill="#b9bdc4">hold threshold: 300 ms · touch threshold: &lt; 30</text>
+</svg>
